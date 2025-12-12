@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: rgb(57, 50, 50);">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title" , "generate title")
+    div.style.background = "green"
+    div.style.padding = '15px'
+    div.innerText = "Jatin is Programming"
+    div.style.borderRadius = "15px"
+    div.style.marginRight = "372px"
+    document.body.appendChild(div)
+    //This is the way to creating elements using JS , since HTML makes the elements which should be their from start but JS makes them so that they can be called dynamically when needed. DONT GET CONFUSED that why we are creating elements from JS when we can create them through HTML and CSS
+    
+</script>
+</html>
