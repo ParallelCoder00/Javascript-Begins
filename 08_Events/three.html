@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chai aur Javascript</title>
+  </head>
+  <body>
+    <h1>Chai Aur Javascript</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+  </body>
+  <script>
+    const interval = function () {
+      console.log("jatin is pro", Date.now());
+    };
+    let intervalid = null;
+    document.querySelector("#start").addEventListener("click", function () {
+      if (intervalid === null){
+          intervalid = setInterval(interval, 1000);
+          console.log("STARTED");
+      }
+    });
+    document.querySelector("#stop").addEventListener("click", function () {
+      clearInterval(intervalid);
+      intervalid = null;
+      console.log("STOPPED");
+    });
+  </script>
+</html>

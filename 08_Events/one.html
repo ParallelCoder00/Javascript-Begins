@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam asperiores perspiciatis inventore exercitationem ad itaque, vitae maxime voluptatibus doloremque adipisci fugiat dolorum nesciunt animi accusamus? Voluptatibus voluptas ut dolores?</p>
+</body>
+<script>
+
+    // There are many ways of add event in JS but most efficient and most modern way to do it is by using - 
+    document.getElementById('para').addEventListener('click', function(e){
+        e.preventDefault
+        alert('This para is clicked!!!')
+    }, false)
+
+    // Topics to learn about events are
+    // Types , Timestamps , defaultPrevented
+    // Target , toElement , srcElement , currentTarget
+    // clientX , clientY , screenX , screenY
+    // altKey , ctrlKey , shiftKey , keyCode
+
+</script>
+</html>
