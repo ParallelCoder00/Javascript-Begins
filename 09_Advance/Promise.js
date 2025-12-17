@@ -38,10 +38,10 @@ promiseThree
   })
   .catch(function (error) {
     console.log(error);
-  });
-// .finally(() =>
-// console.log("Either resolved or rejected, this will always run")
-// );
+  })
+  .finally(() =>
+    console.log("Either resolved or rejected, this will always run")
+  );
 
 async function consumePromiseThree() {
   try {
@@ -56,28 +56,27 @@ consumePromiseThree();
 const promiseFour = new Promise(function (resolve, reject) {
   setTimeout(function () {
     error = false;
-    if(!error){
-      console.log('async is running of promiseFour'); 
+    if (!error) {
+      console.log("async is running of promiseFour");
     } else {
-      console.log('ERROR of promiseFour'); 
+      console.log("ERROR of promiseFour");
     }
-  },1000);
+  }, 1000);
 });
-promiseFour.then(function (user) {
-  console.log(user);
-}).catch(function(error){
-  console.log(error);
-  
-})
+promiseFour
+  .then(function (user) {
+    console.log(user);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
-async function sinkpromiseFour(){
+async function sinkpromiseFour() {
   try {
-    const result = await promiseFour
+    const result = await promiseFour;
     console.log(result);
-    
   } catch (error) {
     console.log(error);
-    
   }
 }
-sinkpromiseFour()
+sinkpromiseFour();
